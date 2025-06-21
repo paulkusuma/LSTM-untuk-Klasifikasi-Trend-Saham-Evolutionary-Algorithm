@@ -1,0 +1,36 @@
+
+### 1. **Tujuan**
+Bertujuan untuk mengklasifikasikan tren harga Bitcoin (naik atau turun) dengan menggunakan LSTM, di mana arsitektur modelnya dioptimalkan secara otomatis menggunakan Evolutionary Algorithm (EA).
+
+### 2. **Data & Fitur**
+- Data historis BTC/USD digunakan sebagai basis.
+- Ditambahkan berbagai indikator teknikal untuk membantu prediksi tren, seperti MA, RSI, MACD, Bollinger Bands, dan ATR.
+- Data kemudian discaling agar cocok untuk LSTM.
+
+### 3. **Modeling**
+- Model LSTM dikembangkan menggunakan TensorFlow/Keras.
+- Model terdiri dari beberapa layer LSTM dan Dense, ditambah Dropout untuk regularisasi.
+
+### 4. **Optimisasi dengan EA**
+- EA digunakan untuk mencari kombinasi hiperparameter terbaik, seperti:
+  - Jumlah neuron
+  - Dropout rate
+  - Learning rate
+  - Jumlah epoch dan batch size
+
+### 5. **Evaluasi**
+- Akurasi model diukur berdasarkan data validasi dan test.
+- Metrik yang digunakan: precision, recall, dan f1-score.
+- Disediakan visualisasi dari training history dan confusion matrix.
+
+### 6. **Kelebihan**
+- Kombinasi antara LSTM (yang kuat untuk timeseries) dan EA (yang fleksibel untuk optimisasi hiperparameter) memberi pendekatan yang menarik dan powerful.
+- Penambahan fitur teknikal memperkaya informasi input ke model.
+
+### 7. **Saran Pengembangan**
+- Dapat ditambahkan:
+  - Hyperparameter tambahan untuk dioptimasi seperti learning rate scheduler atau activation function.
+  - Evaluasi tambahan pada data dari aset lain.
+  - Cross-validation untuk menghindari overfitting.
+
+---
